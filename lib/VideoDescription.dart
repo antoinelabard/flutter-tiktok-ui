@@ -21,6 +21,7 @@ class VideoDescription extends StatelessWidget {
                 Icon(
                   Icons.music_note,
                   size: 15,
+                  color: Colors.white,
                 ),
                 Text(
                   'Artist name - Album name - song',

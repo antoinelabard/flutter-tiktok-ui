@@ -10,6 +10,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'TikTokUI',
       home: Home(),
+      theme: ThemeData(
+        textTheme: Theme.of(context).textTheme.apply(
+          bodyColor: Colors.white,
+          displayColor: Colors.white
+        )
+      ),
     );
   }
 }
