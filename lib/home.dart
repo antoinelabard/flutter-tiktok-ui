@@ -26,16 +26,24 @@ class Home extends StatelessWidget {
     return Expanded(
           child: Row(
         children: [
-          Expanded(
-              child: Container(
-            color: Colors.green,
-          )),
-          Container(
-            width: 100.0,
-            color: Colors.red,
-          )
+          _videoDescription(),
+          _actionToolbar()
         ],
       ));
+  }
+
+  Expanded _videoDescription() {
+    return Expanded(
+            child: Container(
+          color: Colors.green,
+        ));
+  }
+
+  Container _actionToolbar() {
+    return Container(
+          width: 100.0,
+          color: Colors.red,
+        );
   }
 
   _topSection() {
