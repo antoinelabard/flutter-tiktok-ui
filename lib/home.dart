@@ -6,8 +6,30 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-      )
-    );
+        body: Column(
+      children: [
+        Container(
+          height: 100,
+          color: Colors.yellow,
+        ),
+        Expanded(
+            child: Row(
+          children: [
+            Expanded(
+                child: Container(
+              color: Colors.green,
+            )),
+            Container(
+              width: 100.0,
+              color: Colors.red,
+            )
+          ],
+        )),
+        Container(
+          height: 80,
+          color: Colors.blue,
+        )
+      ],
+    ));
   }
 }
