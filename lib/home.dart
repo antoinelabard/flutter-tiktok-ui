@@ -8,28 +8,40 @@ class Home extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        Container(
-          height: 100,
-          color: Colors.yellow,
-        ),
-        Expanded(
-            child: Row(
-          children: [
-            Expanded(
-                child: Container(
-              color: Colors.green,
-            )),
-            Container(
-              width: 100.0,
-              color: Colors.red,
-            )
-          ],
-        )),
-        Container(
-          height: 80,
-          color: Colors.blue,
-        )
+        _topSection(),
+        _middleSection(),
+        _bottomSection()
       ],
     ));
+  }
+
+  Container _bottomSection() {
+    return Container(
+        height: 80,
+        color: Colors.blue,
+      );
+  }
+
+  Expanded _middleSection() {
+    return Expanded(
+          child: Row(
+        children: [
+          Expanded(
+              child: Container(
+            color: Colors.green,
+          )),
+          Container(
+            width: 100.0,
+            color: Colors.red,
+          )
+        ],
+      ));
+  }
+
+  _topSection() {
+    return Container(
+        height: 100,
+        color: Colors.yellow,
+      );
   }
 }
