@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
   Container _bottomSection() {
     return Container(
         // height: 80,
-        color: Colors.blue,
+        // color: Colors.blue,
         child: BottomToolbar());
   }
 
