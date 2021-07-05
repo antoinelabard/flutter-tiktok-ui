@@ -10,10 +10,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         body: Column(
-      children: [_topSection(), _middleSection(), _bottomSection()],
-    ));
+          children: [_topSection(), _middleSection(), _bottomSection()],
+        ));
   }
 
   Container _bottomSection() {
@@ -35,7 +35,22 @@ class Home extends StatelessWidget {
   _topSection() {
     return Container(
       height: 100,
-      color: Colors.yellow,
+      padding: EdgeInsets.only(bottom: 15),
+      alignment: Alignment(0, 1),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('Following'),
+          Container(
+            width: 15,
+          ),
+          Text(
+            'For you',
+            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }

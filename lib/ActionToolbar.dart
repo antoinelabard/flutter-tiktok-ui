@@ -19,6 +19,7 @@ class ActionToolbar extends StatelessWidget {
         _getSocialAction(iconData: TikTokIcons.heart, title: '3.2m'),
         _getSocialAction(iconData: TikTokIcons.chat_bubble, title: '16.4k'),
         _getSocialAction(iconData: TikTokIcons.reply, title: 'Share'),
+        _getMusicPlayerAction()
       ]),
     );
   }
@@ -64,7 +65,8 @@ class ActionToolbar extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(ProfileImageSize / 2)),
           child: CachedNetworkImage(
-            imageUrl: "https://secure.gravatar.com/avatar/ef4a9338dca42372f15427cdb4595ef7",
+            imageUrl:
+                "https://secure.gravatar.com/avatar/ef4a9338dca42372f15427cdb4595ef7",
             placeholder: (context, url) => new CircularProgressIndicator(),
             errorWidget: (context, url, error) => new Icon(Icons.error),
           ),
@@ -83,4 +85,39 @@ class ActionToolbar extends StatelessWidget {
           child: Icon(Icons.add, color: Colors.white, size: 20),
         ),
       );
+
+  _musicGradient() => LinearGradient(colors: [
+        Colors.grey[800],
+        Colors.grey[900],
+        Colors.grey[900],
+        Colors.grey[800],
+      ],
+    stops: [.0, .4, .6,1.0],
+    begin: Alignment.bottomLeft,
+    end: Alignment.bottomRight
+  );
+
+  _getMusicPlayerAction() => Container(
+          margin: EdgeInsets.only(top: 10),
+    width: ActionWidgetSize,
+    height: ActionWidgetSize,
+    child: Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(11),
+          width: ProfileImageSize,
+          height: ProfileImageSize,
+          decoration: BoxDecoration(
+            gradient: _musicGradient(),
+            borderRadius: BorderRadius.circular(ProfileImageSize / 2)
+          ),
+          child: CachedNetworkImage(
+            imageUrl: "https://secure.gravatar.com/avatar/ef4a9338dca42372f15427cdb4595ef7",
+            placeholder: (context, url) => new CircularProgressIndicator(),
+            errorWidget: (context, url, error) => new Icon(Icons.error),
+          ),
+        )
+      ],
+    ),
+  );
 }
