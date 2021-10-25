@@ -1,3 +1,9 @@
-# Phase 1
+# Tiktok UI
 
-Empty starting project so you can follow along with the [tutorial on Meduim](https://medium.com/@dane.mackier/breaking-down-tiktoks-ui-using-flutter-8489fe4ad944)
+Tiktok UI clone with Flutter.
+
+## Images
+![](screenshots/tiktok-ui.png)
+
+## Credit
+[FilledStacks](https://www.youtube.com/channel/UC2d0BYlqQCdF9lJfydl_02Q)
